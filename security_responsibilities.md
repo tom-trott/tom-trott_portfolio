@@ -4,7 +4,7 @@ In my current role I perform a number of cybersecurity tasks and hold numerous s
 
 * Security audits of IAM systems, SaaS subscriptions
 * Software and SaaS security risk assessments
-* Investigating EDR and SIEM alerts
+* Investigating and escalating EDR and SIEM alerts
 * Configuring SIEM alert rules
 * Defining processes for the secure destruction of data stored on company assets
 * Management of MFA policies and systems
