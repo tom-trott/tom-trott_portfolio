@@ -1,7 +1,7 @@
 **Career Identity Statement**
 
-I am an IT support engineer and systems administrator with more than ten years of experience, looking to move into the cybersecurity sphere.
+I am an IT support engineer and systems administrator with more than ten years of experience defining and refining processes to support and protect end users. I am looking to bring these transferrable skills to the cybersecurity sphere.
 
-I am passionate about protecting people and their data from malicious actors and have a talent for fine detail and crafting engaging communication.
+My greatest strength is my ability to empathise with my colleagues to understand the problem they're experiencing. I have an eye for fine detail and a talent for crafting engaging communication.
 
-And most importantly, I value working with great colleagues in a supportive working culture.
+Most importantly, I value working with great colleagues in a supportive working culture.
