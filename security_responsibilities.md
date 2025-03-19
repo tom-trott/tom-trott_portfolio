@@ -6,6 +6,7 @@ In my current role I perform a number of cybersecurity tasks and hold numerous s
 * Components, Software, and SaaS security risk assessments
 * Investigating and escalating EDR and SIEM alerts
 * Configuring SIEM alert rules
+* Configuring OAuth applications
 * Defining processes for the secure destruction of data stored on company assets
 * Management of MFA policies and systems
 * Defining password and access management policies
