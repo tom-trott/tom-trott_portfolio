@@ -13,7 +13,8 @@ do
     certificate=$(echo "$output" | grep "BEGIN CERTIFICATE")
     no_certificate=$(echo "$output" | grep "no peer certificate available")
 
-    echo -n "$website ${tls_option//-tls/TLS} response .... " # Use -n to avoid a newline
+#Use -n to avoid new line, replace -tls with "TLS ", and replace _ with .
+    echo -n "$website ${tls_option//-tls/TLS } response .... " | sed 's/_/./g'
 
     if [ -n "$certificate" ]; then
       echo "certificate received"
