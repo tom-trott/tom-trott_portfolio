@@ -323,7 +323,7 @@ SCEN036,A company Github repo was incorrectly set as public when it was created 
 SCEN037,The CEO of your company keeps reporting their Okta account as locked.
 SCEN038,The CFO of your company complains that they cannot share company documents with their personal Google account.
 SCEN039,"You discover a Post-it on a company whiteboard which reads, ""Usr: admin, passwd: 0dyss3y"""
-SCEN040,The building management company have reported an authorised webcam discovered in the building's underground bike storage.
+SCEN040,The building management company have reported an unauthorised webcam discovered in the building's underground bike storage.
 SCEN041,You witness an employee printing out company documents and packing them in their rucksack to take home.
 SCEN042,You notice that an employee has called in sick on the day of mandatory security training for the second year in a row.
 SCEN043,Your SIEM is reporting an AWS security group open to the world.
