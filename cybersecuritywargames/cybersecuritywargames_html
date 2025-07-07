@@ -317,7 +317,7 @@ SCEN030,An employee keeps receiving a warning message that their screen is being
 SCEN031,An employee has shared sensitive company information on a public Discord channel.
 SCEN032,A former employee posts on LinkedIn claiming the company's product contains critical security flaws.
 SCEN033,Several company devices are displaying messages saying their storage is encrypted and asking for a ransom to be paid in Bitcoin.
-SCEN034,You have discovered a feed from the building CCTV cameras on streaming on the dark web.
+SCEN034,You have discovered a feed from the building CCTV cameras streaming on the dark web.
 SCEN035,An employee has installed Tor browser on their company device.
 SCEN036,A company Github repo was incorrectly set as public when it was created over a year ago.
 SCEN037,The CEO of your company keeps reporting their Okta account as locked.
