@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Wargaming Scenarios</title>
+    <title>Cybersecurity Wargames. What would you do? Training and discussion topics for SOC and DevSecOps teams.</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for League of Moveable Type fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Linden+Hill&family=Goudy+Bookletter+1911&family=Fanwood+Text&family=League+Gothic&family=League+Spartan&family=Raleway&family=Ostrich+Sans:wght@400&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Linden+Hill&family=Goudy+Bookletter+1911&family=Fanwood+Text&family=League+Gothic&family=League+Spartan&family=Raleway&family=Ostrich+Sans:wght@400&family=Orbitron:wght@400;700&family=Knewave&family=Prociono&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Sorts Mill Goudy', serif; /* Default serif font, will be overridden for card text */
@@ -309,7 +309,7 @@ SCEN022,A shared testing device is missing from the office with no record of it 
 SCEN023,Two employees have reported a suspicious person attempting to access the office by tailgating.
 SCEN024,An unrecognised external user keeps joining internal video calls.
 SCEN025,An employee has received an abusive email from an internal service account.
-SCEN026,"An employee has recieved a phone call claiming to be from Payroll, asking them to confirm their bank details."
+SCEN026,"An employee has received a phone call claiming to be from Payroll, asking them to confirm their bank details."
 SCEN027,A user has received a phone call from their company credit card issuer reporting suspicious activity.
 SCEN028,"An employee has scanned a QR code sent to them in an email, and since then, their phone has been getting very hot."
 SCEN029,Your public website is displaying a message supporting Russia's invasion of Ukraine.
@@ -322,7 +322,7 @@ SCEN035,An employee has installed Tor browser on their company device.
 SCEN036,A company Github repo was incorrectly set as public when it was created over a year ago.
 SCEN037,The CEO of your company keeps reporting their Okta account as locked.
 SCEN038,The CFO of your company complains that they cannot share company documents with their personal Google account.
-SCEN039,"You discover a Post-it on a company whiteboard which reads, ""Usr: admin, passwd: 0dyss3y"""
+SCEN039,"You discover a Post-it on a company whiteboard which reads, Usr: admin, passwd: 0dyss3y"
 SCEN040,The building management company have reported an unauthorised webcam discovered in the building's underground bike storage.
 SCEN041,You witness an employee printing out company documents and packing them in their rucksack to take home.
 SCEN042,You notice that an employee has called in sick on the day of mandatory security training for the second year in a row.
@@ -358,7 +358,8 @@ What's the worse-case scenario?
 Do you have controls in place for this?
 Is there another layer of defence you can add?
 How worried do you feel?
-Is this a red alert?`;
+Is this a red alert?
+Do you have a playbook for this?`;
 
 
         let allScenarios = []; // Stores all parsed scenarios
@@ -388,7 +389,10 @@ Is this a red alert?`;
             "'Fanwood Text', serif",
             "'League Gothic', sans-serif",
             "'League Spartan', sans-serif",
-            "'Raleway', sans-serif"
+            "'Raleway', sans-serif",
+            // Removed Blackout
+            "'Knewave', cursive",    // Added Knewave
+            "'Prociono', serif"      // Added Prociono
         ];
 
         // List of appealing gradient color pairs, adjusted for better contrast with white text
@@ -433,7 +437,7 @@ Is this a red alert?`;
                 const line = nonEmptyLines[i].trim();
                 if (!line) continue; // Should already be filtered, but double-check
 
-                const obj = {};
+                let obj = {};
                 let inQuote = false;
                 let currentField = '';
                 let fieldIndex = 0;
@@ -1103,8 +1107,35 @@ Is this a red alert?`;
             animationFrameId = requestAnimationFrame(animateBackground);
         }
 
+        /**
+         * Handles scroll events to fade out the main title.
+         */
+        function handleScrollFadeTitle() {
+            const scrollY = window.scrollY;
+            const spacerHeight = headerSpacer.offsetHeight;
+
+            // Start fading when scrollY is half the spacer height
+            const fadeStart = spacerHeight * 0.5;
+            // Fully faded when scrollY reaches the full spacer height
+            const fadeEnd = spacerHeight;
+
+            let opacity = 1;
+
+            if (scrollY > fadeStart) {
+                // Calculate fade progress: 0 when scrollY = fadeStart, 1 when scrollY = fadeEnd
+                const fadeProgress = (scrollY - fadeStart) / (fadeEnd - fadeStart);
+                opacity = 1 - fadeProgress;
+            }
+
+            // Clamp opacity between 0 and 1
+            mainTitleElement.style.opacity = Math.max(0, Math.min(1, opacity));
+        }
+
+
         document.addEventListener('DOMContentLoaded', initBackgroundAnimation);
         document.addEventListener('DOMContentLoaded', initializeApp);
+        // Add scroll event listener to fade the title
+        window.addEventListener('scroll', handleScrollFadeTitle);
     </script>
 </body>
 </html>
